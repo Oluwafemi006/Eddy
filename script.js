@@ -150,3 +150,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Email js configuration 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+            .then(function(response) {
+                alert("Message sent successfully!");
+                form.reset();
+            }, function(error) {
+                alert("Failed to send message. Error: " + JSON.stringify(error));
+            });
+    });
+});
