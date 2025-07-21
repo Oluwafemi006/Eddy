@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+      emailjs.sendForm("baoke-006", "template_h8tvy1m", form)
         .then(() => {
           alert("Message sent successfully!");
           form.reset();
